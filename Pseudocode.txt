@@ -1,0 +1,26 @@
+Rock Paper Scissors
+
+5 rounds
+
+
+create function getComputerChoice, that randomly returns rock paper or scissors
+
+first get human choice
+computer chooses second choice
+
+
+assign rock paper scissors to 123
+assign which numebr beats which other number
+generate computer choice randomly out of 1 2 or 3 using math random
+store in a variable
+get user input (rock paper or scissors), store in HumanChoice variable
+
+if same number, draw
+if human win, increase win counter by 1 (round number by 1)
+if comp win, increase theri win by 1 and round number by 1
+reset
+
+NUmber of rounds should also be stored in a counter.
+
+Essentially, a for loop or while loop (while rounds is less than 5, run this...)
+
