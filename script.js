@@ -18,8 +18,7 @@ function getComputerChoice(computerChoice) {
         return computerChoice;
     }
 
-    /* Get Computer Choice between 1 2 or 3 and
-  assign that value to a string and return*/
+    // Get Computer Choice between 1 2 or 3 and assign that value to a string and return
 }
 
 function getHumanChoice(humanChoice) {
@@ -27,69 +26,45 @@ function getHumanChoice(humanChoice) {
     humanChoice = humanInput.toLowerCase();
     return humanChoice;
 }
-/*
- * When called, this inputs the human choice.
- */
+// When called, this calls  the human choice function
 
-let humanScore = 0;
-let computerScore = 0;
-/*
- * Sets the score to 0.
- */
 
-function playRound(humanChoice, computerChoice) {
-    if (humanChoice == "scissors" && computerChoice == "paper") {
-        console.log("You win! " + humanChoice + " beats " + computerChoice);
-        humanScore++;
-    }
-    if (humanChoice == "paper" && computerChoice == "rock") {
-        console.log("You win! " + humanChoice + " beats " + computerChoice);
-        humanScore++;
-    }
-    if (humanChoice == "rock" && computerChoice == "scissors") {
-        console.log("You win! " + humanChoice + " beats " + computerChoice);
-        humanScore++;
-    }
-    if (computerChoice == "scissors" && humanChoice == "paper") {
-        console.log("You lose. " + computerChoice + " beats " + humanChoice);
-        computerScore++;
-    }
-    if (computerChoice == "paper" && humanChoice == "rock") {
-        console.log("You lose. " + computerChoice + " beats " + humanChoice);
-        computerScore++;
-    }
-    if (computerChoice == "rock" && humanChoice == "scissors") {
-        console.log("You lose. " + computerChoice + " beats " + humanChoice);
-        computerScore++;
-    }
-    if (humanChoice == computerChoice) {
-        console.log("It's a draw.");
-    }
+function playGame() {
+    let humanScore = 0;
+    let computerScore = 0;
+    // Sets the score to 0
 
+
+    function playRound(humanChoice, computerChoice) {
+        if ((humanChoice == "scissors" && computerChoice == "paper") || (humanChoice == "paper" && computerChoice == "rock") || (humanChoice == "rock" && computerChoice == "scissors")) {
+           
+            console.log("You win! " + humanChoice + " beats " + computerChoice);
+            humanScore++;
+        }
+        if ((computerChoice == "scissors" && humanChoice == "paper") || (computerChoice == "paper" && humanChoice == "rock") || (computerChoice == "rock" && humanChoice == "scissors")) {
+            console.log("You lose. " + computerChoice + " beats " + humanChoice);
+            computerScore++;
+        }
+        if (humanChoice == computerChoice) {
+            console.log("It's a draw.");
+        }
+
+    }
+    //* initiates a round of gameplay, use this to caculate the result SCISSORS BEATS PAPER, PAPER BEATS ROCK ROCK BEATS SCISSORS
+    for (let playRoundCounter = 1; playRoundCounter < 6; playRoundCounter++) {
+        const humanSelection = getHumanChoice();
+        const computerSelection = getComputerChoice();
+        console.log("Your choice = " + humanSelection)
+        console.log("Computer choice = " + computerSelection)
+        playRound(humanSelection, computerSelection);
+        console.log("NUMBER OF ROUNDS COMPLETE = " + playRoundCounter);
+        console.log("Your score = " + humanScore)
+        console.log("Computer score = " + computerScore)
+    }
+     //if playround function has only been called less than 5 times
+    //call playround function
 }
 
-/**
- * Initiates a round of gameplay, use this to caculate
- * the result
- * SCISSORS BEATS PAPER
- * PAPER BEATS ROCK
- * ROCK BEATS SCISSORS
- */
 
-function playGame(){
-    
-}
-/* PLAY GAME FUNCTION */
-
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-playRound(humanSelection, computerSelection);
-
-/**
- * Calls our functions to get human, comp choices, and initiate the round.
- */
-
-console.log(humanSelection)
-console.log("computer choice = " + computerSelection)
-console.log("comp score = " + computerScore)
-console.log(humanScore)
+playGame();
+//starts the game
