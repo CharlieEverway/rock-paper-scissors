@@ -4,12 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock Paper Scissors Game</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-
+    <div id="scoreHeader">
+        <p>Human Score: <span id="human-score">0</span></p>
+        <p>Computer Score: <span id="computer-score">0</span></p>
+    </div>
+    <div class="main-ui">
+        <h1>Rock Paper Scissors Game</h1>
+        <img src="rps-image.png">
+        <div class="buttons">
+            <button id="rockButton">Rock</button>
+            <button id="scissorsButton">Scissors</button>
+            <button id="paperButton">Paper</button>
+        </div>
+        <button id="resetButton">Game Reset</button>
+    </div>
+    
+    <div class="gameWindow" id="gameMessages">
+    </div>
 
     <script src="script.js"></script>
 </body>
