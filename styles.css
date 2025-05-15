@@ -1,7 +1,7 @@
 body {
-    background-color: rgb(182, 182, 182);
+    background-color: white;
     font-family: 'Courier New', Courier, monospace;
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -9,51 +9,87 @@ body {
     margin: 0;
 }
 
-.main-ui{
-    /*border: black 5px solid;*/
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding:20px;
-}
-
-.main-ui img{
-    margin: -100px; /*Crops our image*/
-}
-
-#scoreHeader{
-    display:flex;
-    justify-content: center;
-    gap:50px;
-
-}
-
-#resetButton{
-    margin-top:20px;
-}
-
-
-#scoreHeader p{
-    border: solid purple 5px;
+h1 {
+    color: white;
+    background-color: black; 
     border-radius: 10px;
     padding: 10px;
 }
 
+.main-ui {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.main-ui img {
+    margin: -100px;
+    /*Crops our image*/
+}
+
+#scoreHeader {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+#resetButton {
+    margin-top: 20px;
+}
+
+#scoreHeader p {
+    background-color: black; 
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#gameInfo {
+    background-color: black;
+    border-radius: 10px;
+    margin: 10px;
+    width: 600px;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
 .gameWindow {
     min-height: 100px;
+    max-height: 150px;
     display: flex;
     flex-direction: column;
     text-align: center;
-    border: solid purple 5px;
     border-radius: 10px;
-    min-width: 800px;
-    max-width: 800px;
-    
+    min-width: 600px;
+    max-width: 600px;
+    padding: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: black; 
+    color: white;
 }
 
-.buttons{
-    display:flex;
+.buttons {
+    display: flex;
     justify-content: space-evenly;
-    gap:100px;
+    gap: 50px;
+}
+
+button {
+    background-color: black; 
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+}
+
+button:hover {
+    background-color: #5e5e5e; 
 }
